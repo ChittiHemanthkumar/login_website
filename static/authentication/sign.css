@@ -1,0 +1,21 @@
+.box{
+    box-shadow: 0px 0px 4px 4px rgb(0,0,0,0.26);
+  background-color: darkcyan;
+  padding-top:50px;
+  padding-bottom:70px;
+  text-align: center;
+  border-radius: 12px;
+ 
+ width:50%;  
+ height:50%;
+ margin:120px auto;
+}
+.signin{
+    font-size: 20px;
+    border-radius: 5px; 
+    color:white; 
+    background-color: black;
+  }
+  .abc{
+    margin-bottom:15px;
+  }

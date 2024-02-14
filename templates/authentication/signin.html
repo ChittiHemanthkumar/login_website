@@ -1,0 +1,35 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="{%static "authentication/sign.css"%}">
+</head>
+<body>
+    <div class="box">
+    <h3>Sign IN</h3> 
+    <form action="/signin" method="post">
+        {% csrf_token %}  
+        <div class="abc">
+        <label for="">Username :</label> 
+        <input type="text" id="username" name="username" placeholder="Enter your username"Required>
+        <br>
+        </div>
+
+        <label for="">Password :</label> 
+        <input type="password" id="pass1" name="pass1" placeholder="Enter your password"Required>
+        <br>
+        <br>
+        
+        <button class="signin" type="submit">Sign In</button>
+        <br>
+        </form>
+    
+    </div>
+
+</body>
+</html>

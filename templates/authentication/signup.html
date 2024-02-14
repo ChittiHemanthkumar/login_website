@@ -1,0 +1,57 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="{%static "authentication/signup.css"%}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body >
+    <div class="signup">
+    <h3 >SignUp</h3> 
+    <form action="/signup" method="post">
+        {% csrf_token %}
+        <ul>  
+        <li> 
+        <label for="">Username   :</label> 
+        <input type="text" id="username" name="username" placeholder="create a username"Required>
+        </li> 
+        <br>
+        <li>
+        <label for="">First Name  :</label> 
+        <input type="text" id="fname" name="fname" placeholder="Enter Your first name"Required>
+        </li>
+        <br>
+        <li>
+        <label for="">Last Name   :</label> 
+        <input type="text" id="lname" name="lname" placeholder="Enter you last name"Required>
+        </li>
+        <br>
+        <li>
+        <label for="">Email Address:</label> 
+        <input type="email" id="email" name="email" placeholder="Enter your email address"Required>
+        </li>
+        <br>
+        <li>
+        <label for="">Password         :</label> 
+        <input type="password" id="pass1" name="pass1" placeholder="create your password"Required>
+        </li>
+        <br>
+        <li>
+        <label for="">Confirm password :</label> 
+        <input type="password" id="pass2" name="pass2" placeholder="confirm your password"Required>
+        </li> 
+    </ul>
+        <br>
+    
+        <button class="btn" type="submit" >Sign Up</button> 
+
+        <br>
+    </form>
+    
+    
+</div>
+</body>
+</html>

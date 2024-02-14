@@ -1,0 +1,33 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" href="{%static "authentication/style.css"%}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication</title>
+</head>
+<body> 
+<div class="box">
+    {%for message in messages%} 
+    <div class="alert alert={{message.tages}} alert.dismissible fade show " role="alert"> 
+        <strong>Message: </strong>{{message}} 
+        <button type="button" class="close" data-dismiss="alert" aria-label="close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {%endfor%}
+    <h3>Welcome to Iconic mobile store</h3> 
+    {%if user.is_authenticated %} 
+    <h1>Hello {{fname}} 
+    <h3>Your are successfully loged in</h3>
+    <button class="signout" type="submit"><a href="/signout" style="color:white;">SignOut</a></button>
+    {%else%}
+   
+    <button  class="signup" type="submit"><a href="/signup" style="color:white;">SignUp</a></button>
+    <button class="signin"type="submit"><a href="/signin" style="color:white;">SignIn</a></button>
+    {%endif%}
+</div>
+</body>
+</html>
